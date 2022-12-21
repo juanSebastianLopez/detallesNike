@@ -1,0 +1,158 @@
+/* Colores */
+/* Fuente */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/nike-bg.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__bg {
+  height: 100vh;
+}
+.container__phone {
+  border: 1px solid #ffffff;
+  width: 308px;
+  height: 675px;
+  border-radius: 20px;
+  background-image: url("../images/bg-phone.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.container__slider {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  overflow-x: scroll;
+  gap: 15px;
+  height: 97px;
+  cursor: pointer;
+}
+.container__slider-img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone__nav {
+  padding-top: 20px;
+  position: relative;
+  z-index: 1000;
+}
+.phone__icons {
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.phone__icons-icon {
+  display: none;
+  width: 27px;
+}
+.phone__logo {
+  cursor: pointer;
+}
+
+.contenido__text {
+  top: -15px;
+  left: 131px;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
+}
+.contenido__img {
+  filter: drop-shadow(0 4px 32px hsla(203deg, 71%, 60%, 0.5));
+  animation: float-eth 4s ease-in-out infinite;
+}
+.contenido__img-img {
+  animation: scaleUp 1s ease 0s 1 normal forwards;
+}
+
+.autor {
+  color: #dedede;
+  line-height: 10px;
+}
+.autor__titulo {
+  font-size: 30px;
+}
+.autor__titulo-author {
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0ac3b4;
+  letter-spacing: -1px;
+  transition: 0.5s;
+}
+.autor__titulo-author:hover {
+  transition: color 0.3s;
+  color: #fff;
+}
+
+.descripcion {
+  background-image: url("../images/text.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(0.9) translateX(2px);
+}
+.descripcion__texto {
+  text-transform: uppercase;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 19px;
+  text-align: end;
+  font-weight: 200;
+}
+
+/* Scroll none */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Interaccion con JS */
+.inactivo {
+  display: none;
+}
+
+.activo {
+  display: block;
+}
+
+/* Animaciones */
+@keyframes float-eth {
+  0% {
+    transform: translateY(0.5rem);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.13) rotate3d(2, 3, 17, 61deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main.min.css.map */

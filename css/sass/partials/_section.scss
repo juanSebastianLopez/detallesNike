@@ -1,0 +1,137 @@
+.container{
+    &__bg{
+        height: 100vh;
+    }
+   &__phone{
+    border: 1px solid $white;
+    width: 308px;
+    height: 675px;
+    border-radius: 20px;
+    background-image: url('../images/bg-phone.png');
+    background-size: cover;
+    overflow: hidden;
+   }
+   &__slider{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    overflow-x: scroll;
+    gap: 15px;
+    height: 97px;
+    cursor: pointer;
+    &-img{
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+    }
+   }
+}
+.phone{
+    &__nav{
+        padding-top: 20px;
+        position: relative;
+        z-index: 1000;
+    }
+    &__icons{
+        font-size: 16px;
+        color: $white;
+        cursor: pointer;
+        &-icon{
+            display: none;
+            width: 27px;
+        }
+    }
+    &__logo{
+        cursor: pointer;
+    }
+}
+.contenido{
+    &__text{
+        top: -15px;
+        left: 131px;
+        color: $white;
+        font-size: 19px;
+        font-weight: 600;
+    }
+    &__img{
+        filter: drop-shadow(0 4px 32px hsla(203, 71%, 60%, .5));
+        animation: float-eth 4s ease-in-out infinite;
+        // &:hover{
+        //     transform: scale(1.1) rotate3d(2, 3, 17, 61deg);
+        //     transition: transform .8s ease-in-out;
+        // }
+        &-img{
+            animation: scaleUp 1s ease 0s 1 normal forwards;
+        }
+    }
+} 
+
+.autor{
+    color: #dedede;
+    line-height: 10px;
+    &__titulo{
+        font-size: 30px;
+    }
+    &__titulo-author{
+        font-size: 20px;
+        font-family: $autor;
+        font-weight: 500;
+        text-decoration: none;
+        color: #0ac3b4;
+        letter-spacing: -1px;
+        transition: .5s;
+        &:hover{
+            transition: color .3s;
+            color: #fff;
+        }
+    }
+}
+.descripcion{
+    background-image: url('../images/text.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(.9) translateX(2px);
+    &__texto{
+        text-transform: uppercase;
+        padding: 20px;
+        color: $white;
+        font-size: 19px;
+        text-align: end;
+        font-weight: 200;
+    }
+}
+/* Scroll none */
+::-webkit-scrollbar {
+    display: none;
+}
+/* Interaccion con JS */
+.inactivo{
+    display: none;
+}
+.activo{
+    display: block;
+}
+/* Animaciones */
+@keyframes float-eth {
+    0%{
+        transform: translateY(.5rem);
+    }
+    50%{
+        transform: translateY(2rem);
+    }
+    100%{
+        transform:  translateY(.5rem);
+    }
+}
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.13) rotate3d(2, 3, 17, 61deg);
+	}
+    100%{
+        transform: scale(1);
+    }
+}
